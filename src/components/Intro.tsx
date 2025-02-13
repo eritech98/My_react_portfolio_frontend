@@ -1,6 +1,6 @@
 "use client"
 
-import { forwardRef, useState } from "react"
+import { forwardRef, useState, useEffect } from "react"
 import {
   Layout,
   Typography,
@@ -54,6 +54,18 @@ const whiteText = { color: "white" }
 
 const Intro = forwardRef((props, ref) => {
   const [activeTab, setActiveTab] = useState("1")
+  const [experienceSuffix, setExperienceSuffix] = useState("years")
+
+  useEffect(() => {
+    const handleResize = () => {
+      setExperienceSuffix(window.innerWidth <= 768 ? "yrs" : "years")
+    }
+
+    handleResize() // Initial check
+    window.addEventListener("resize", handleResize)
+
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   const workflowSteps = [
     {
@@ -129,7 +141,7 @@ const Intro = forwardRef((props, ref) => {
                             <Statistic
                               title={<span style={{ ...whiteText, opacity: 0.8 }}>Experience</span>}
                               value={2}
-                              suffix="years"
+                              suffix={experienceSuffix}
                               prefix={<ClockCircleOutlined />}
                               valueStyle={whiteText}
                             />
@@ -445,10 +457,15 @@ const Intro = forwardRef((props, ref) => {
             transform: translateY(0);
           }
         }
-        
         @media (max-width: 768px) {
           .intro-content {
             text-align: center;
+          }
+          .intro-content h1 {
+            font-size: 2rem !important;
+          }
+          .intro-content .ant-typography {
+            font-size: 15px !important;
           }
         }
       `}</style>

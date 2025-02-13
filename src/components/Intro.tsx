@@ -149,56 +149,71 @@ const Intro = forwardRef((props, ref) => {
                   </Badge.Ribbon>
                 </Col>
                 <Col xs={24} md={12}>
-                  <Space direction="vertical" size="large" style={{ width: "100%" }}>
-                    <Title level={1} style={{ ...whiteText, margin: 0, fontSize: 16px }}>
-                      Crafting Digital Excellence
-                    </Title>
-                    <Paragraph style={{ ...whiteText, opacity: 0.8, fontSize: "18px" }}>
-                      Transforming ideas into exceptional digital experiences with cutting-edge technology and
-                      innovative solutions.
-                    </Paragraph>
-                    <Space>
-                      <a
-                        href="https://drive.google.com/file/d/1SGvrFJyi5GpU2iV599zBsgCXpYBQ8Cyb/view?usp=sharing"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <Button
-                          type="default"
-                          size="large"
-                          icon={<ThunderboltOutlined />}
-                          style={{
-                            backgroundColor: "#f0f2f5", // Soft white background
-                            color: "#333", // Dark text color
-                            borderColor: "#d9d9d9", // Light border color
-                            borderRadius: "4px", // Rounded corners
-                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
-                            transition: "all 0.3s ease", // Smooth transition for hover effects
-                            "&:hover": {
-                              backgroundColor: "#e6e9eb", // Slightly darker background on hover
-                              color: "#000", // Darker text color on hover
-                              borderColor: "#adb5bd", // Darker border color on hover
-                              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)" // Slightly stronger shadow on hover
-                            }
-                          }}>
-                          Download CV
-                        </Button>
-                      </a>
-                      <a href="#section1">
-                        <Button
-                          size="large"
-                          ghost
-                          style={{
-                            borderColor: "white",
-                            color: "white",
-                            borderRadius: "4px", // Rounded corners
-                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
-                            transition: "all 0.3s ease" // Smooth transition for hover effects
-                          }}
-                          icon={<HeartOutlined />}>
-                          Get in Touch
-                        </Button>
-                      </a>
-                    </Space>
+                  <Space
+      direction="vertical"
+      size="large"
+      style={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center", // Center horizontally
+        justifyContent: "center", // Center vertically
+        textAlign: "center", // Center text
+      }}
+    >
+      <Title level={1} style={{ ...whiteText, margin: 0, fontSize: "16px" }}>
+        Crafting Digital Excellence
+      </Title>
+      <Paragraph style={{ ...whiteText, opacity: 0.8, fontSize: "18px" }}>
+        Transforming ideas into exceptional digital experiences with cutting-edge
+        technology and innovative solutions.
+      </Paragraph>
+      <Space>
+        <a
+          href="https://drive.google.com/file/d/1SGvrFJyi5GpU2iV599zBsgCXpYBQ8Cyb/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button
+            type="default"
+            size="large"
+            icon={<ThunderboltOutlined />}
+            style={{
+              backgroundColor: "#f0f2f5", // Soft white background
+              color: "#333", // Dark text color
+              borderColor: "#d9d9d9", // Light border color
+              borderRadius: "4px", // Rounded corners
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
+              transition: "all 0.3s ease", // Smooth transition for hover effects
+              "&:hover": {
+                backgroundColor: "#e6e9eb", // Slightly darker background on hover
+                color: "#000", // Darker text color on hover
+                borderColor: "#adb5bd", // Darker border color on hover
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)", // Slightly stronger shadow on hover
+              },
+            }}
+          >
+            Download CV
+          </Button>
+        </a>
+        <a href="#section1">
+          <Button
+            size="large"
+            ghost
+            style={{
+              borderColor: "white",
+              color: "white",
+              borderRadius: "4px", // Rounded corners
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
+              transition: "all 0.3s ease", // Smooth transition for hover effects
+            }}
+            icon={<HeartOutlined />}
+          >
+            Get in Touch
+          </Button>
+        </a>
+      </Space>
+    </Space>
                   </Space>
                 </Col>
               </Row>
@@ -217,17 +232,17 @@ const Intro = forwardRef((props, ref) => {
                 onChange={setActiveTab}
                 size="large"
                 centered
-                style={{ marginBottom: "48px" }}>
+                style={{ marginBottom: "46px" }}>
                 {/* My Story Tab */}
                 <TabPane tab="My Story" key="1">
                   <Row gutter={[24, 24]} align="middle">
                     <Col xs={24} md={12}>
-                      <Paragraph style={{ fontSize: "13px" }}>
+                      <Paragraph style={{ fontSize: "14px" }}>
                         I'm a passionate full-stack developer and meteorologist, blending tech and science to create
                         smart, data-driven solutions. With experience in weather forecasting, AI, and software
                         development, I build tools that make complex data accessible.
                       </Paragraph>
-                      <Paragraph style={{ fontSize: "13px" }}>
+                      <Paragraph style={{ fontSize: "14px" }}>
                         My journey spans meteorology at JKIA and Eldoret International Airport to full-stack development
                         through ALX. Beyond weather applications, I build all kinds of digital solutions—from AI-driven
                         tools to secure web platforms—designed to solve real-world problems.

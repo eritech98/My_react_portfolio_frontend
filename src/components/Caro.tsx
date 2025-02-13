@@ -5,6 +5,7 @@ import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css";
 import "../../node_modules/bootstrap/dist/js/bootstrap.min.js"
 import '../../node_modules/antd/dist/reset.css';
+import chicoImage from '../../assets/chico.PNG';
 
 const { Content } = Layout;
 const { TabPane } = Tabs;
@@ -19,7 +20,7 @@ const Caro: React.FC = () => {
       id: 1,
       title: "Chico - Chat Application",
       description: "A real-time chat and voice communication platform with session recording and music playback.",
-      image: "/public/assets/chico.PNG", // Thumbnail image
+      image: chicoImage, // Thumbnail image
       
       details: "Chico is a dynamic real-time chat application that enables users to engage in text and voice conversations. Features include session recording, music integration, and secure authentication for private chats. Built using Node.js, EJS, WebSockets, and Express, it delivers a seamless and interactive communication experience.",
       projectLink: "https://chico-audio.onrender.com/", // Link to the project

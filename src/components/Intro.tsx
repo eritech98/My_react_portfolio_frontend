@@ -150,10 +150,10 @@ const Intro = forwardRef((props, ref) => {
                 </Col>
                 <Col xs={24} md={12}>
                   <Space direction="vertical" size="large" style={{ width: "100%" }}>
-                    <Title level={1} style={{ ...whiteText, margin: 0, fontSize: 16px }}>
+                    <Title level={1} style={{ ...whiteText, margin: 0 }}>
                       Crafting Digital Excellence
                     </Title>
-                    <Paragraph style={{ ...whiteText, opacity: 0.8, fontSize: "18px" }}>
+                    <Paragraph style={{ ...whiteText, opacity: 0.8, fontSize: "17px" }}>
                       Transforming ideas into exceptional digital experiences with cutting-edge technology and
                       innovative solutions.
                     </Paragraph>

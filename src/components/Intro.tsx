@@ -222,12 +222,12 @@ const Intro = forwardRef((props, ref) => {
                 <TabPane tab="My Story" key="1">
                   <Row gutter={[24, 24]} align="middle">
                     <Col xs={24} md={12}>
-                      <Paragraph style={{ fontSize: "12px" }}>
+                      <Paragraph style={{ fontSize: "13px" }}>
                         I'm a passionate full-stack developer and meteorologist, blending tech and science to create
                         smart, data-driven solutions. With experience in weather forecasting, AI, and software
                         development, I build tools that make complex data accessible.
                       </Paragraph>
-                      <Paragraph style={{ fontSize: "12px" }}>
+                      <Paragraph style={{ fontSize: "13px" }}>
                         My journey spans meteorology at JKIA and Eldoret International Airport to full-stack development
                         through ALX. Beyond weather applications, I build all kinds of digital solutions—from AI-driven
                         tools to secure web platforms—designed to solve real-world problems.

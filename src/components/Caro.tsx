@@ -19,7 +19,7 @@ const Caro: React.FC = () => {
       id: 1,
       title: "Chico - Chat Application",
       description: "A real-time chat and voice communication platform with session recording and music playback.",
-      image: "https://github.com/eritech98/Images_private/blob/main/Chico.PNG", // Thumbnail image
+      image: "https://github.com/eritech98/Images_private/raw/main/Chico.PNG", // Thumbnail image
       
       details: "Chico is a dynamic real-time chat application that enables users to engage in text and voice conversations. Features include session recording, music integration, and secure authentication for private chats. Built using Node.js, EJS, WebSockets, and Express, it delivers a seamless and interactive communication experience.",
       projectLink: "https://chico-audio.onrender.com/", // Link to the project
@@ -34,7 +34,7 @@ const Caro: React.FC = () => {
       id: 2,
       title: 'ProEase Property Management App',
       description: 'A smart solution for landlords and landladies to manage their properties directly.',
-      image: 'https://github.com/eritech98/Images_private/blob/main/ProEase.PNG',
+      image: 'https://github.com/eritech98/Images_private/raw/main/ProEase.PNG',
      
       details: 'ProEase simplifies property management with automated rent collection, maintenance tracking, and financial reporting. Designed for efficiency and transparency, it empowers landlords with full control over their properties. The app is still in development.',
       projectLink: 'https://example.com/proease',
@@ -47,7 +47,7 @@ const Caro: React.FC = () => {
     },
     { id: 3, title: 'SkyHire Aircraft Rental Platform', 
       description: 'A streamlined solution for hiring private jets and aircraft with ease.', 
-      image: 'https://github.com/eritech98/Images_private/blob/main/SkyHire.PNG', 
+      image: 'https://github.com/eritech98/Images_private/raw/main/SkyHire.PNG', 
     
       details: 'SkyHire connects users with aircraft rental services, offering real-time availability, pricing, and booking options. Designed for efficiency and convenience, it simplifies the aircraft hiring process.', 
       projectLink: 'https://eritech98.github.io/test4/',
@@ -65,7 +65,7 @@ const Caro: React.FC = () => {
   "id": 4,
   "title": "Erick's Developer Portfolio",
   "description": "A portfolio showcasing full-stack projects with live links, built using React and Node.js.",
-  "image": "https://github.com/eritech98/Images_private/blob/main/react.PNG",
+  "image": "https://github.com/eritech98/Images_private/raw/main/react.PNG",
   "details": "This portfolio presents Erick's full-stack development projects, highlighting expertise in AI, weather applications, automation, and web platforms. It includes live project links, descriptions, and case studies. The site is built using React for the frontend and Node.js for the backend, ensuring a smooth user experience.",
   "projectLink": "https://erick.up.railway.app/",
   "features": [
@@ -81,7 +81,7 @@ const Caro: React.FC = () => {
   "id": 5,
   "title": "Student Coaching & Study Abroad Platform",
   "description": "A web platform designed to help students with coaching, mentorship, and studying abroad opportunities.",
-  "image": "https://github.com/eritech98/Images_private/blob/main/client.PNG",
+  "image": "https://github.com/eritech98/Images_private/raw/main/client.PNG",
   "details": "This platform was developed for a client to assist students in academic coaching, career mentorship, and securing opportunities to study abroad. It provides personalized coaching sessions, study materials, and step-by-step guidance for international education applications. The platform simplifies the process of finding scholarships, visa applications, and admissions into top universities worldwide.",
   "projectLink": "https://example.com/student-coaching",
   "features": [
@@ -98,7 +98,7 @@ const Caro: React.FC = () => {
   "id": 6,
   "title": "Live Weather Radar & Forecast App",
   "description": "A weather application with a live radar map, GPS search, and a beautiful UI for real-time weather updates.",
-  "image": "https://github.com/eritech98/Images_private/blob/main/weather.PNG",
+  "image": "https://github.com/eritech98/Images_private/raw/main/weather.PNG",
   "details": "This weather app provides real-time weather updates with a live radar map powered by MapTiler. Users can search for any location worldwide using a GPS-based search or a manual search bar within the radar map. The application features a sleek, modern frontend with a sliding modal that displays the current and tomorrow’s forecast in an interactive and user-friendly way.",
   "projectLink": "https://example.com/weather-app",
   "features": [
@@ -118,7 +118,7 @@ const Caro: React.FC = () => {
       { id: 7,
      title: 'Cosmo - Daily Astronomy Insights', 
       description: 'A visually stunning platform providing daily astronomy pictures with expert explanations.', 
-      image: 'https://github.com/eritech98/Images_private/blob/main/cosmo.PNG', 
+      image: 'https://github.com/eritech98/Images_private/raw/main/cosmo.PNG', 
        
       details: 'Cosmo delivers breathtaking daily images from NASAs Astronomy Picture of the Day (APOD) with insightful explanations. It features a responsive design, an interactive starry background and embedded SpaceX videos to enhance the user experience.', 
       projectLink: 'https://erickolando.up.railway.app/',
@@ -135,7 +135,7 @@ const Caro: React.FC = () => {
   id: 8,
   title: 'Erick Olando Portfolio',
   description: 'A professional portfolio showcasing Erick Olando\'s expertise in software development, meteorology, and AI applications.',
-  image: 'https://github.com/eritech98/Images_private/blob/main/portfolio.PNG',
+  image: 'https://github.com/eritech98/Images_private/raw/main/portfolio.PNG',
   
   details: 'Built with Bootstrap, HTML, CSS, JavaScript, and W3.CSS, this portfolio highlights Erick Olando\'s projects, including real-time weather applications, AI-driven tools, and a secure document management system with API integration.',
   projectLink: "https://eritechva.netlify.app/",
@@ -151,7 +151,7 @@ const Caro: React.FC = () => {
   "id": 9,
   "title": "Erick AI - Conversational AI Bot",
   "description": "Developed a text-based AI chatbot for natural language conversations, providing intelligent responses and engaging interactions.",
-  "image": "https://github.com/eritech98/Images_private/blob/main/Chatai2.PNG",
+  "image": "https://github.com/eritech98/Images_private/raw/main/Chatai2.PNG",
   
   "details": "Erick AI is a conversational AI bot capable of engaging users in meaningful discussions, answering questions, and providing insights across various topics. Built with advanced NLP capabilities, it ensures smooth and context-aware interactions.Limited to 10 requests per IP after which a user waits for 3 days",
   "projectLink": "https://erickai.up.railway.app/",

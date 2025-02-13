@@ -149,74 +149,57 @@ const Intro = forwardRef((props, ref) => {
                   </Badge.Ribbon>
                 </Col>
                 <Col xs={24} md={12}>
-                  <Space
-      direction="vertical"
-      size="large"
-      style={{
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-start", // Left-align by default
-        textAlign: "left", // Left-align text by default
-        "@media (max-width: 768px)": {
-          alignItems: "center", // Center-align on mobile
-          textAlign: "center", // Center-align text on mobile
-        },
-      }}
-    >
-      <Title level={1} style={{ ...whiteText, margin: 0, fontSize: "16px" }}>
-        Crafting Digital Excellence
-      </Title>
-      <Paragraph style={{ ...whiteText, opacity: 0.8, fontSize: "18px" }}>
-        Transforming ideas into exceptional digital experiences with cutting-edge
-        technology and innovative solutions.
-      </Paragraph>
-      <Space>
-        <a
-          href="https://drive.google.com/file/d/1SGvrFJyi5GpU2iV599zBsgCXpYBQ8Cyb/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button
-            type="default"
-            size="large"
-            icon={<ThunderboltOutlined />}
-            style={{
-              backgroundColor: "#f0f2f5", // Soft white background
-              color: "#333", // Dark text color
-              borderColor: "#d9d9d9", // Light border color
-              borderRadius: "4px", // Rounded corners
-              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
-              transition: "all 0.3s ease", // Smooth transition for hover effects
-              "&:hover": {
-                backgroundColor: "#e6e9eb", // Slightly darker background on hover
-                color: "#000", // Darker text color on hover
-                borderColor: "#adb5bd", // Darker border color on hover
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)", // Slightly stronger shadow on hover
-              },
-            }}
-          >
-            Download CV
-          </Button>
-        </a>
-        <a href="#section1">
-          <Button
-            size="large"
-            ghost
-            style={{
-              borderColor: "white",
-              color: "white",
-              borderRadius: "4px", // Rounded corners
-              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
-              transition: "all 0.3s ease", // Smooth transition for hover effects
-            }}
-            icon={<HeartOutlined />}
-          >
-            Get in Touch
-          </Button>
-        </a>
-      </Space>
-    </Space>
+                  <Space direction="vertical" size="large" style={{ width: "100%" }}>
+                    <Title level={1} style={{ ...whiteText, margin: 0, fontSize: 16px }}>
+                      Crafting Digital Excellence
+                    </Title>
+                    <Paragraph style={{ ...whiteText, opacity: 0.8, fontSize: "18px" }}>
+                      Transforming ideas into exceptional digital experiences with cutting-edge technology and
+                      innovative solutions.
+                    </Paragraph>
+                    <Space>
+                      <a
+                        href="https://drive.google.com/file/d/1SGvrFJyi5GpU2iV599zBsgCXpYBQ8Cyb/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <Button
+                          type="default"
+                          size="large"
+                          icon={<ThunderboltOutlined />}
+                          style={{
+                            backgroundColor: "#f0f2f5", // Soft white background
+                            color: "#333", // Dark text color
+                            borderColor: "#d9d9d9", // Light border color
+                            borderRadius: "4px", // Rounded corners
+                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
+                            transition: "all 0.3s ease", // Smooth transition for hover effects
+                            "&:hover": {
+                              backgroundColor: "#e6e9eb", // Slightly darker background on hover
+                              color: "#000", // Darker text color on hover
+                              borderColor: "#adb5bd", // Darker border color on hover
+                              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)" // Slightly stronger shadow on hover
+                            }
+                          }}>
+                          Download CV
+                        </Button>
+                      </a>
+                      <a href="#section1">
+                        <Button
+                          size="large"
+                          ghost
+                          style={{
+                            borderColor: "white",
+                            color: "white",
+                            borderRadius: "4px", // Rounded corners
+                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
+                            transition: "all 0.3s ease" // Smooth transition for hover effects
+                          }}
+                          icon={<HeartOutlined />}>
+                          Get in Touch
+                        </Button>
+                      </a>
+                    </Space>
+                  </Space>
                 </Col>
               </Row>
             </div>

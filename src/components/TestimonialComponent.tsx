@@ -17,10 +17,10 @@ const testimonials: Testimonial[] = [
     avatar: "https://github.com/eritech98/Images_private/raw/main/OIP.jpeg"
   },
   {
-    name: "Michael Chen",
-    position: "Marketing Director, Global Brands",
-    content: "Exceptional creativity combined with solid business acumen.",
-    avatar: "https://plus.unsplash.com/premium_photo-1664867432842-16ae7a30aabd?w=500&auto=format&fit=crop&q=60"
+    name: "Macs Machete",
+    position: "CEO, Mjondol Labs",
+    content: "We've worked on a few projects together. One this for sure is that Erick always delivers on his end",
+    avatar: "https://github.com/eritech98/Images_private/raw/main/WhatsApp%20Image%202025-02-13%20at%2013.24.23_9b050a27.jpg"
   },
   {
     name: "Emma Williams",

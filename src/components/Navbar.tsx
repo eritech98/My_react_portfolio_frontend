@@ -230,6 +230,9 @@ export default function PortfolioNavbar() {
       transform: "scale(1.1)",
     },
   }
+  
+
+
 
   const menuPopoverContent = (
     <Menu mode="vertical" style={{ border: "none" }}>

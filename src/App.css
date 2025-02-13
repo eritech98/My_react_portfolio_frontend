@@ -1,0 +1,4 @@
+  html, body {
+  width: 100vw; /* Full viewport width */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}

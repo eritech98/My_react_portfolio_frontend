@@ -11,10 +11,10 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Sarah Johnson",
-    position: "CEO, TechVision Inc",
-    content: "Their strategic approach transformed our digital presence completely.",
-    avatar: "https://images.unsplash.com/photo-1512372923090-7b14fb496d44?w=500&auto=format&fit=crop&q=60"
+    name: "Gorata Malose",
+    position: "Fellow, Princeton Africa",
+    content: "Erick Olando is an incredibly dedicated and talented individual. His passion for innovation, problem-solving, and excellence is truly inspiring. Beyond his skills, he is a reliable and supportive friend. Anyone who works with him will quickly see his exceptional work ethic and creativity.",
+    avatar: "https://github.com/eritech98/Images_private/raw/main/OIP.jpeg"
   },
   {
     name: "Michael Chen",

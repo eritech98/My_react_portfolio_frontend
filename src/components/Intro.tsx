@@ -150,61 +150,67 @@ const Intro = forwardRef((props, ref) => {
                 </Col>
                 <Col xs={24} md={12}>
                   <Space direction="vertical" size="large" style={{ width: "100%", textAlign: "center" }}>
-                    <Title
-                      level={2}
-                      style={{ ...whiteText, margin: 0, fontSize: { xs: "24px", sm: "32px", md: "36px" } }}
-                    >
-                      Crafting Digital Excellence
-                    </Title>
-                    <Paragraph style={{ ...whiteText, opacity: 0.8, fontSize: { xs: "14px", sm: "16px", md: "17px" } }}>
-                      Transforming ideas into exceptional digital experiences with cutting-edge technology and
-                      innovative solutions.
-                    </Paragraph>
-                    <Space style={{ justifyContent: "center" }}>
-                      <a
-                        href="https://drive.google.com/file/d/1SGvrFJyi5GpU2iV599zBsgCXpYBQ8Cyb/view?usp=sharing"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <div style={{ textAlign: { xs: "center", md: "left" } }}>
+                      <Title
+                        level={1}
+                        style={{ ...whiteText, margin: 0, fontSize: { xs: "24px", sm: "32px", md: "36px" } }}
                       >
-                        <Button
-                          type="default"
-                          size="large"
-                          icon={<ThunderboltOutlined />}
-                          style={{
-                            backgroundColor: "#f0f2f5",
-                            color: "#333",
-                            borderColor: "#d9d9d9",
-                            borderRadius: "4px",
-                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                            transition: "all 0.3s ease",
-                            "&:hover": {
-                              backgroundColor: "#e6e9eb",
-                              color: "#000",
-                              borderColor: "#adb5bd",
-                              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)",
-                            },
-                          }}
+                        Crafting Digital Excellence
+                      </Title>
+                      <Paragraph
+                        style={{ ...whiteText, opacity: 0.8, fontSize: { xs: "14px", sm: "16px", md: "17px" } }}
+                      >
+                        Transforming ideas into exceptional digital experiences with cutting-edge technology and
+                        innovative solutions.
+                      </Paragraph>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
+                      <Space>
+                        <a
+                          href="https://drive.google.com/file/d/1SGvrFJyi5GpU2iV599zBsgCXpYBQ8Cyb/view?usp=sharing"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
-                          Download CV
-                        </Button>
-                      </a>
-                      <a href="#section1">
-                        <Button
-                          size="large"
-                          ghost
-                          style={{
-                            borderColor: "white",
-                            color: "white",
-                            borderRadius: "4px",
-                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                            transition: "all 0.3s ease",
-                          }}
-                          icon={<HeartOutlined />}
-                        >
-                          Get in Touch
-                        </Button>
-                      </a>
-                    </Space>
+                          <Button
+                            type="default"
+                            size="large"
+                            icon={<ThunderboltOutlined />}
+                            style={{
+                              backgroundColor: "#f0f2f5",
+                              color: "#333",
+                              borderColor: "#d9d9d9",
+                              borderRadius: "4px",
+                              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                              transition: "all 0.3s ease",
+                              "&:hover": {
+                                backgroundColor: "#e6e9eb",
+                                color: "#000",
+                                borderColor: "#adb5bd",
+                                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)",
+                              },
+                            }}
+                          >
+                            Download CV
+                          </Button>
+                        </a>
+                        <a href="#section1">
+                          <Button
+                            size="large"
+                            ghost
+                            style={{
+                              borderColor: "white",
+                              color: "white",
+                              borderRadius: "4px",
+                              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                              transition: "all 0.3s ease",
+                            }}
+                            icon={<HeartOutlined />}
+                          >
+                            Get in Touch
+                          </Button>
+                        </a>
+                      </Space>
+                    </div>
                   </Space>
                 </Col>
               </Row>

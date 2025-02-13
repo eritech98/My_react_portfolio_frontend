@@ -1,4 +1,6 @@
-import React, { forwardRef, useState } from "react";
+"use client"
+
+import { forwardRef, useState } from "react"
 import {
   Layout,
   Typography,
@@ -12,11 +14,10 @@ import {
   Statistic,
   Tabs,
   Progress,
-  Timeline,
   Collapse,
   Tooltip,
-  ConfigProvider
-} from "antd";
+  ConfigProvider,
+} from "antd"
 import {
   TrophyOutlined,
   ThunderboltOutlined,
@@ -25,81 +26,80 @@ import {
   ClockCircleOutlined,
   RocketOutlined,
   CheckCircleOutlined,
-  LinkedinOutlined,
-  GithubOutlined,
-  TwitterOutlined
-} from "@ant-design/icons";
+} from "@ant-design/icons"
 
-const { Content } = Layout;
-const { Title, Paragraph, Text } = Typography;
-const { TabPane } = Tabs;
-const { Panel } = Collapse;
+const { Content } = Layout
+const { Title, Paragraph, Text } = Typography
+const { TabPane } = Tabs
+const { Panel } = Collapse
 
 const gradientBackground = {
   background: "#3498db",
   color: "orange",
   padding: "80px 0",
-  minHeight: "100vh", // Adjusted to fit the screen
+  minHeight: "100vh",
   display: "flex",
-  alignItems: "center"
-};
+  alignItems: "center",
+  justifyContent: "center",
+}
 
 const cardStyle = {
   background: "rgba(255, 255, 255, 0.2)",
   borderRadius: "10px",
   backdropFilter: "blur(10px)",
   border: "none",
-  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"
-};
+  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+}
 
-const whiteText = { color: "white" };
+const whiteText = { color: "white" }
 
 const Intro = forwardRef((props, ref) => {
-  const [activeTab, setActiveTab] = useState("1");
+  const [activeTab, setActiveTab] = useState("1")
 
   const workflowSteps = [
     {
       title: "1. Discovering Your Needs",
       company: "Discovery",
-      color: "#3498db", // Single color for consistency
+      color: "#3498db",
       description:
-        "Start with an in-depth, friendly conversation to understand your goals and vision. Listen closely to your ideas, ensuring every detail is understood."
+        "Start with an in-depth, friendly conversation to understand your goals and vision. Listen closely to your ideas, ensuring every detail is understood.",
     },
     {
       title: "2. Tailored Planning",
       company: "Planning",
       color: "#3498db",
       description:
-        "Create a customized plan that aligns with your objectives and preferences. Share milestones, timelines, and an open line for feedback."
+        "Create a customized plan that aligns with your objectives and preferences. Share milestones, timelines, and an open line for feedback.",
     },
     {
       title: "3. Collaborative Execution",
       company: "Execution",
       color: "#3498db",
       description:
-        "Execute with care, providing regular updates and ensuring your input is incorporated. Adapt as needed to ensure the project remains aligned with your goals."
+        "Execute with care, providing regular updates and ensuring your input is incorporated. Adapt as needed to ensure the project remains aligned with your goals.",
     },
     {
       title: "4. Final Delivery and Support",
       company: "Delivery",
       color: "#3498db",
       description:
-        "Deliver the final product with clear instructions, ensuring it's easy for you to use. Offer ongoing support and be available for any future needs or adjustments."
-    }
-  ];
+        "Deliver the final product with clear instructions, ensuring it's easy for you to use. Offer ongoing support and be available for any future needs or adjustments.",
+    },
+  ]
 
   return (
     <ConfigProvider
       theme={{
         token: {
           colorPrimary: "#3498db",
-          borderRadius: 8
-        }
-      }}>
+          borderRadius: 8,
+        },
+      }}
+    >
       <Layout style={{ minHeight: "100vh", background: "#f0f2f5" }}>
         <Content>
           {/* First Section */}
-          <div id = "home" style={gradientBackground}>
+          <div id="home" style={gradientBackground}>
             <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px" }}>
               <Row gutter={[48, 48]} align="middle">
                 <Col xs={24} md={12}>
@@ -149,37 +149,42 @@ const Intro = forwardRef((props, ref) => {
                   </Badge.Ribbon>
                 </Col>
                 <Col xs={24} md={12}>
-                  <Space direction="vertical" size="large" style={{ width: "100%" }}>
-                    <Title level={1} style={{ ...whiteText, margin: 0 }}>
+                  <Space direction="vertical" size="large" style={{ width: "100%", textAlign: "center" }}>
+                    <Title
+                      level={2}
+                      style={{ ...whiteText, margin: 0, fontSize: { xs: "24px", sm: "32px", md: "36px" } }}
+                    >
                       Crafting Digital Excellence
                     </Title>
-                    <Paragraph style={{ ...whiteText, opacity: 0.8, fontSize: "17px" }}>
+                    <Paragraph style={{ ...whiteText, opacity: 0.8, fontSize: { xs: "14px", sm: "16px", md: "17px" } }}>
                       Transforming ideas into exceptional digital experiences with cutting-edge technology and
                       innovative solutions.
                     </Paragraph>
-                    <Space>
+                    <Space style={{ justifyContent: "center" }}>
                       <a
                         href="https://drive.google.com/file/d/1SGvrFJyi5GpU2iV599zBsgCXpYBQ8Cyb/view?usp=sharing"
                         target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer"
+                      >
                         <Button
                           type="default"
                           size="large"
                           icon={<ThunderboltOutlined />}
                           style={{
-                            backgroundColor: "#f0f2f5", // Soft white background
-                            color: "#333", // Dark text color
-                            borderColor: "#d9d9d9", // Light border color
-                            borderRadius: "4px", // Rounded corners
-                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
-                            transition: "all 0.3s ease", // Smooth transition for hover effects
+                            backgroundColor: "#f0f2f5",
+                            color: "#333",
+                            borderColor: "#d9d9d9",
+                            borderRadius: "4px",
+                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                            transition: "all 0.3s ease",
                             "&:hover": {
-                              backgroundColor: "#e6e9eb", // Slightly darker background on hover
-                              color: "#000", // Darker text color on hover
-                              borderColor: "#adb5bd", // Darker border color on hover
-                              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)" // Slightly stronger shadow on hover
-                            }
-                          }}>
+                              backgroundColor: "#e6e9eb",
+                              color: "#000",
+                              borderColor: "#adb5bd",
+                              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)",
+                            },
+                          }}
+                        >
                           Download CV
                         </Button>
                       </a>
@@ -190,11 +195,12 @@ const Intro = forwardRef((props, ref) => {
                           style={{
                             borderColor: "white",
                             color: "white",
-                            borderRadius: "4px", // Rounded corners
-                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
-                            transition: "all 0.3s ease" // Smooth transition for hover effects
+                            borderRadius: "4px",
+                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                            transition: "all 0.3s ease",
                           }}
-                          icon={<HeartOutlined />}>
+                          icon={<HeartOutlined />}
+                        >
                           Get in Touch
                         </Button>
                       </a>
@@ -207,7 +213,7 @@ const Intro = forwardRef((props, ref) => {
 
           {/* About Me Section */}
           <p ref={ref}></p>
-          <div id = "about" style={{ maxWidth: "1200px", margin: "64px auto", padding: "0 20px" }}>
+          <div id="about" style={{ maxWidth: "1200px", margin: "64px auto", padding: "0 20px" }}>
             <Card style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }}>
               <Title level={2} style={{ textAlign: "center", marginBottom: "32px", color: "#3498db" }}>
                 About Me
@@ -217,7 +223,8 @@ const Intro = forwardRef((props, ref) => {
                 onChange={setActiveTab}
                 size="large"
                 centered
-                style={{ marginBottom: "48px" }}>
+                style={{ marginBottom: "48px" }}
+              >
                 {/* My Story Tab */}
                 <TabPane tab="My Story" key="1">
                   <Row gutter={[24, 24]} align="middle">
@@ -254,49 +261,49 @@ const Intro = forwardRef((props, ref) => {
                         name: "JavaScript/TypeScript",
                         level: 90,
                         badge:
-                          "https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black"
+                          "https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black",
                       },
                       {
                         name: "React",
                         level: 85,
-                        badge: "https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black"
+                        badge: "https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black",
                       },
                       {
                         name: "Node.js",
                         level: 88,
-                        badge: "https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white"
+                        badge: "https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white",
                       },
                       {
                         name: "Python",
                         level: 80,
-                        badge: "https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"
+                        badge: "https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white",
                       },
                       {
                         name: "PostgreSQL",
                         level: 92,
                         badge:
-                          "https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white"
+                          "https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white",
                       },
                       {
                         name: "AWS",
                         level: 72,
-                        badge: "https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white"
+                        badge: "https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white",
                       },
                       {
                         name: "EJS",
                         level: 97,
-                        badge: "https://img.shields.io/badge/EJS-8BC34A?style=flat&logo=javascript&logoColor=white"
+                        badge: "https://img.shields.io/badge/EJS-8BC34A?style=flat&logo=javascript&logoColor=white",
                       },
                       {
                         name: "Git",
                         level: 95,
-                        badge: "https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white"
+                        badge: "https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white",
                       },
                       {
                         name: "REST APIs",
                         level: 90,
-                        badge: "https://img.shields.io/badge/REST-02569B?style=flat&logo=rest&logoColor=white"
-                      }
+                        badge: "https://img.shields.io/badge/REST-02569B?style=flat&logo=rest&logoColor=white",
+                      },
                     ].map((skill, index) => (
                       <Col xs={24} sm={12} md={8} key={index}>
                         <Card
@@ -305,22 +312,27 @@ const Intro = forwardRef((props, ref) => {
                             height: "100%",
                             transition: "all 0.3s",
                             boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                            border: "1px solid #f0f0f0"
+                            border: "1px solid #f0f0f0",
                           }}
-                          bodyStyle={{ padding: "20px" }}>
+                          bodyStyle={{ padding: "20px" }}
+                        >
                           <Tooltip title={`${skill.level}% proficiency`}>
                             <div style={{ marginBottom: "16px", display: "flex", alignItems: "center", gap: "8px" }}>
                               <Text strong style={{ fontSize: "16px" }}>
                                 {skill.name}
                               </Text>
-                              <img src={skill.badge} alt={skill.name} style={{ height: "20px" }} />
+                              <img
+                                src={skill.badge || "/placeholder.svg"}
+                                alt={skill.name}
+                                style={{ height: "20px" }}
+                              />
                             </div>
                             <Progress
                               percent={skill.level}
                               status="active"
                               strokeColor={{
                                 "0%": "#3498db",
-                                "100%": "#2ecc71"
+                                "100%": "#2ecc71",
                               }}
                               strokeWidth={8}
                               showInfo={false}
@@ -348,26 +360,26 @@ const Intro = forwardRef((props, ref) => {
                           title: "Web Development",
                           icon: <RocketOutlined style={{ fontSize: "32px", color: "#3498db" }} />,
                           description: "Modern and responsive web applications tailored to your needs.",
-                          quote: ""
+                          quote: "",
                         },
                         {
                           title: "Mobile Apps",
                           icon: <ThunderboltOutlined style={{ fontSize: "32px", color: "#9b59b6" }} />,
                           description: "Native and cross-platform mobile solutions for iOS and Android.",
-                          quote: ""
+                          quote: "",
                         },
                         {
                           title: "UI/UX Design",
                           icon: <StarOutlined style={{ fontSize: "32px", color: "#2ecc71" }} />,
                           description: "Intuitive and beautiful user interfaces that enhance user experience.",
-                          quote: ""
+                          quote: "",
                         },
                         {
                           title: "Consulting",
                           icon: <CheckCircleOutlined style={{ fontSize: "32px", color: "#e67e22" }} />,
                           description: "Technical guidance and solutions architecture for your projects.",
-                          quote: ""
-                        }
+                          quote: "",
+                        },
                       ].map((service, index) => (
                         <Col xs={24} sm={12} key={index}>
                           <Card
@@ -376,8 +388,9 @@ const Intro = forwardRef((props, ref) => {
                             actions={[
                               <text type="link" key="learn-more" style={{ color: "blue" }}>
                                 {service.quote}
-                              </text>
-                            ]}>
+                              </text>,
+                            ]}
+                          >
                             {service.icon}
                             <Title level={4} style={{ marginTop: "16px" }}>
                               {service.title}
@@ -403,8 +416,9 @@ const Intro = forwardRef((props, ref) => {
                             flexDirection: "column",
                             justifyContent: "space-between",
                             opacity: 0,
-                            animation: `fadeIn 0.5s ease ${index * 0.2}s forwards`
-                          }}>
+                            animation: `fadeIn 0.5s ease ${index * 0.2}s forwards`,
+                          }}
+                        >
                           <div>
                             <Title level={4} style={{ color: step.color }}>
                               {step.title}
@@ -439,7 +453,8 @@ const Intro = forwardRef((props, ref) => {
         }
       `}</style>
     </ConfigProvider>
-  );
-});
+  )
+})
 
-export default Intro;
+export default Intro
+

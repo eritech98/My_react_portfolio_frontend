@@ -164,7 +164,7 @@ const Intro = forwardRef((props, ref) => {
         },
       }}
     >
-      <Title level={1} style={{ ...whiteText, margin: 0, fontSize: "16px" }}>
+      <Title level={1} style={{ ...whiteText, margin: 0, fontSize: "24px" }}>
         Crafting Digital Excellence
       </Title>
       <Paragraph style={{ ...whiteText, opacity: 0.8, fontSize: "18px" }}>

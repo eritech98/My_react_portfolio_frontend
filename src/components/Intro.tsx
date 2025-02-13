@@ -159,6 +159,9 @@ const Intro = forwardRef((props, ref) => {
         alignItems: "center", // Center horizontally
         justifyContent: "center", // Center vertically
         textAlign: "center", // Center text
+        "@media (max-width: 768px)": {
+          padding: "0 16px", // Add padding for better spacing on mobile
+        },
       }}
     >
       <Title level={1} style={{ ...whiteText, margin: 0, fontSize: "16px" }}>
@@ -214,7 +217,6 @@ const Intro = forwardRef((props, ref) => {
         </a>
       </Space>
     </Space>
-                  </Space>
                 </Col>
               </Row>
             </div>
@@ -232,7 +234,7 @@ const Intro = forwardRef((props, ref) => {
                 onChange={setActiveTab}
                 size="large"
                 centered
-                style={{ marginBottom: "46px" }}>
+                style={{ marginBottom: "48px" }}>
                 {/* My Story Tab */}
                 <TabPane tab="My Story" key="1">
                   <Row gutter={[24, 24]} align="middle">

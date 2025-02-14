@@ -24,6 +24,7 @@ const { Header } = Layout
 
 export default function PortfolioNavbar() {
   const [visible, setVisible] = useState(false)
+  const [isTablet, setIsTablet] = useState(false) // Added isTablet state
   const [isMobile, setIsMobile] = useState(false)
   const [menuPopoverVisible, setMenuPopoverVisible] = useState(false)
 
@@ -38,7 +39,8 @@ export default function PortfolioNavbar() {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 992)
+      setIsMobile(window.innerWidth < 768) // Updated breakpoint
+      setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024) // Added tablet check
     }
 
     checkScreenSize()
@@ -230,9 +232,6 @@ export default function PortfolioNavbar() {
       transform: "scale(1.1)",
     },
   }
-  
-
-
 
   const menuPopoverContent = (
     <Menu mode="vertical" style={{ border: "none" }}>
@@ -279,45 +278,46 @@ export default function PortfolioNavbar() {
                 Erick.O
               </a>
             </div>
-            {!isMobile && (
-              <>
-                <Menu
-                  mode="horizontal"
-                  style={{ ...menuStyle, flex: 1, justifyContent: "center" }}
-                  selectable={false}
-                  overflowedIndicator={<MenuOutlined />}
-                  disabledOverflow
-                >
-                  {mainMenuItems.map((item) => (
-                    <Menu.Item key={item.key} onClick={() => scrollToSection(item.ref)} style={menuItemStyle}>
-                      {item.label === "Menu" ? (
-                        <Popover
-                          content={menuPopoverContent}
-                          trigger="hover"
-                          visible={menuPopoverVisible}
-                          onVisibleChange={(visible) => setMenuPopoverVisible(visible)}
-                          placement="bottom"
-                        >
-                          <span>{item.label}</span>
-                        </Popover>
-                      ) : (
-                        item.label
-                      )}
-                    </Menu.Item>
-                  ))}
-                </Menu>
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  {socialMenuItems.map((item) => (
-                    <Tooltip key={item.key} title={item.label}>
-                      <a href={item.link} target="_blank" rel="noopener noreferrer" style={iconButtonStyle}>
-                        <Button icon={item.icon} type="text" />
-                      </a>
-                    </Tooltip>
-                  ))}
-                </div>
-              </>
-            )}
-            {isMobile && (
+            {!isMobile &&
+              !isTablet && ( // Updated conditional rendering
+                <>
+                  <Menu
+                    mode="horizontal"
+                    style={{ ...menuStyle, flex: 1, justifyContent: "center" }}
+                    selectable={false}
+                    overflowedIndicator={<MenuOutlined />}
+                    disabledOverflow
+                  >
+                    {mainMenuItems.map((item) => (
+                      <Menu.Item key={item.key} onClick={() => scrollToSection(item.ref)} style={menuItemStyle}>
+                        {item.label === "Menu" ? (
+                          <Popover
+                            content={menuPopoverContent}
+                            trigger="hover"
+                            visible={menuPopoverVisible}
+                            onVisibleChange={(visible) => setMenuPopoverVisible(visible)}
+                            placement="bottom"
+                          >
+                            <span>{item.label}</span>
+                          </Popover>
+                        ) : (
+                          item.label
+                        )}
+                      </Menu.Item>
+                    ))}
+                  </Menu>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    {socialMenuItems.map((item) => (
+                      <Tooltip key={item.key} title={item.label}>
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" style={iconButtonStyle}>
+                          <Button icon={item.icon} type="text" />
+                        </a>
+                      </Tooltip>
+                    ))}
+                  </div>
+                </>
+              )}
+            {(isMobile || isTablet) && ( // Updated conditional rendering
               <Button type="text" icon={<MenuOutlined />} onClick={showDrawer} style={{ color: "inherit" }} />
             )}
           </nav>

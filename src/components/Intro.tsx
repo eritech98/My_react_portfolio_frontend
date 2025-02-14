@@ -95,7 +95,7 @@ const Intro = forwardRef((props, ref) => {
         },
       }}
     >
-      <Layout style={{ minHeight: "100vh", background: "#f0f2f5" }}>
+      <Layout  id = "#" style={{ minHeight: "100vh", background: "#f0f2f5" }}>
         <Content>
           {/* First Section */}
           <div id="home" style={gradientBackground}>

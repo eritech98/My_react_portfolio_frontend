@@ -29,10 +29,10 @@ const testimonials: Testimonial[] = [
     avatar: "https://github.com/eritech98/Images_private/raw/main/SAF.jpg"
   },
   {
-    name: "David Lee",
-    position: "CTO, InnovateTech",
-    content: "Their expertise in cutting-edge technologies is truly impressive.",
-    avatar: "https://images.unsplash.com/photo-1495681796091-d84e65e2ad51?w=500&auto=format&fit=crop&q=60"
+    name: "Mbali ramakgasha",
+    position: "Software Engineer, Johannesburg",
+    content: "I've had the pleasure of working with Erick on several projects, and his expertise, problem-solving skills, and dedication to delivering high-quality code always stand out. He approaches every challenge with a keen eye for detail and a commitment to finding the most efficient solutions. His ability to collaborate, communicate ideas clearly, and adapt to new technologies makes him an invaluable team member. I highly recommend Erick to anyone looking for a skilled and reliable developer.",
+    avatar: "https://github.com/eritech98/Images_private/raw/main/Mbali.jpg"
   }
 ];
 

@@ -9,7 +9,7 @@ console.log(constant);
 function App() {
   return (
     <div>
-      <header></header>
+      
       <main>
         <Navbar />
       </main>

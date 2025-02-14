@@ -34,7 +34,9 @@ const { TabPane } = Tabs
 const { Panel } = Collapse
 
 const gradientBackground = {
-  background: "#3498db",
+  background: "linear-gradient(-45deg, #3498db, #2980b9, #2c3e50, #3498db)",
+  backgroundSize: "400% 400%",
+  animation: "gradient 15s ease infinite",
   color: "orange",
   padding: "80px 0",
   minHeight: "100vh",
@@ -43,11 +45,11 @@ const gradientBackground = {
 }
 
 const cardStyle = {
-  background: "rgba(255, 255, 255, 0.2)",
+  background: "rgba(255, 255, 255, 0.1)",
   borderRadius: "10px",
   backdropFilter: "blur(10px)",
-  border: "none",
-  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+  border: "1px solid rgba(255, 255, 255, 0.2)",
+  boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
 }
 
 const whiteText = { color: "white" }
@@ -435,6 +437,17 @@ const Intro = forwardRef((props, ref) => {
 
       {/* CSS for Animations */}
       <style jsx>{`
+        @keyframes gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
         @keyframes fadeIn {
           from {
             opacity: 0;

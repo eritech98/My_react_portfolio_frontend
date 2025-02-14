@@ -26,6 +26,8 @@ export default function PortfolioNavbar() {
   const [visible, setVisible] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [menuPopoverVisible, setMenuPopoverVisible] = useState(false)
+  const [isOverflowing, setIsOverflowing] = useState(false) // Added state for overflow
+  const navbarRef = useRef(null) // Added ref for navbar
 
   // Refs for scrolling to sections
   const introRef = useRef(null)
@@ -46,6 +48,18 @@ export default function PortfolioNavbar() {
 
     return () => window.removeEventListener("resize", checkScreenSize)
   }, [])
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (navbarRef.current) {
+        setIsOverflowing(navbarRef.current.scrollWidth > navbarRef.current.offsetWidth)
+      }
+    }
+
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [isMobile])
 
   const showDrawer = () => {
     setVisible(true)
@@ -230,9 +244,6 @@ export default function PortfolioNavbar() {
       transform: "scale(1.1)",
     },
   }
-  
-
-
 
   const menuPopoverContent = (
     <Menu mode="vertical" style={{ border: "none" }}>
@@ -273,13 +284,13 @@ export default function PortfolioNavbar() {
     >
       <Header style={headerStyle}>
         <div style={containerStyle}>
-          <nav style={navStyle}>
+          <nav style={navStyle} ref={navbarRef}>
             <div style={{ display: "flex", alignItems: "center" }}>
               <a href="#" style={logoStyle}>
                 Erick.O
               </a>
             </div>
-            {!isMobile && (
+            {!isMobile && !isOverflowing && (
               <>
                 <Menu
                   mode="horizontal"
@@ -317,7 +328,7 @@ export default function PortfolioNavbar() {
                 </div>
               </>
             )}
-            {isMobile && (
+            {(isMobile || isOverflowing) && (
               <Button type="text" icon={<MenuOutlined />} onClick={showDrawer} style={{ color: "inherit" }} />
             )}
           </nav>

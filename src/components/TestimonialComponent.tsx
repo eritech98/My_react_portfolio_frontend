@@ -19,7 +19,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Macs Machete",
     position: "CEO, Mjondol Labs",
-    content: "We've worked on a few projects together. One this for sure is that Erick always delivers on his end",
+    content: "We've worked on a few projects together. One thing for sure is that Erick always delivers on his end",
     avatar: "https://github.com/eritech98/Images_private/raw/main/WhatsApp%20Image%202025-02-13%20at%2013.24.23_9b050a27.jpg"
   },
   {

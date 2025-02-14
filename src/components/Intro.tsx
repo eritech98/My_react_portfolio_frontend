@@ -117,8 +117,14 @@ const Intro = forwardRef((props, ref) => {
           {/* First Section */}
           <div id="home" style={gradientBackground}>
             <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px" }}>
-              <Row gutter={[48, 48]} align="middle">
-                <Col xs={24} md={12}>
+              <Row
+                gutter={[
+                  { xs: 24, sm: 32, md: 48 },
+                  { xs: 24, sm: 32, md: 48 },
+                ]}
+                align="middle"
+              >
+                <Col xs={24} sm={24} md={12}>
                   <Badge.Ribbon text="Available for hire" color="green">
                     <Card
                       style={{
@@ -172,7 +178,7 @@ const Intro = forwardRef((props, ref) => {
                     </Card>
                   </Badge.Ribbon>
                 </Col>
-                <Col xs={24} md={12} className="intro-content">
+                <Col xs={24} sm={24} md={12} className="intro-content">
                   <Space
                     direction="vertical"
                     size="large"
@@ -484,19 +490,24 @@ const Intro = forwardRef((props, ref) => {
             transform: translateY(0);
           }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 575px) {
           .intro-content {
             text-align: center;
           }
+        }
+        @media (min-width: 576px) and (max-width: 991px) {
+          .intro-content {
+            text-align: left;
+          }
+        }
+        @media (max-width: 768px) {
+          .intro-content {
+            /*text-align: center;*/
+          }
           .intro-content h1 {
-            font-size: 2.5rem !important;
+            font-size: 3rem !important;
             font-weight: 800 !important;
-            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
             letter-spacing: -0.5px;
-            animation: slideInUp 0.8s ease-out forwards, glowText 2s ease-in-out infinite alternate;
           }
           .intro-content .ant-typography {
             font-size: 15px !important;

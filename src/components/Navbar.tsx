@@ -1,7 +1,7 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
-import { Layout, Menu, Button, Drawer, Tooltip, ConfigProvider, Popover } from "antd"
+import { useState, useEffect, useRef } from "react";
+import { Layout, Menu, Button, Drawer, Tooltip, ConfigProvider, Popover } from "antd";
 import {
   MenuOutlined,
   CodeOutlined,
@@ -9,73 +9,73 @@ import {
   ProfileOutlined,
   TeamOutlined,
   CloudOutlined,
-} from "@ant-design/icons"
+} from "@ant-design/icons";
 
 // Import your components
-import Intro from "./Intro"
-import Caro from "./Caro"
-import Heros from "./Heros"
-import Stats from "./Stats"
-import Testimonial from "./TestimonialComponent"
-import Contact from "./Contact"
-import Myfooter from "./Myfooter"
+import Intro from "./Intro";
+import Caro from "./Caro";
+import Heros from "./Heros";
+import Stats from "./Stats";
+import Testimonial from "./TestimonialComponent";
+import Contact from "./Contact";
+import Myfooter from "./Myfooter";
 
-const { Header } = Layout
+const { Header } = Layout;
 
 export default function PortfolioNavbar() {
-  const [visible, setVisible] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-  const [menuPopoverVisible, setMenuPopoverVisible] = useState(false)
-  const [isOverflowing, setIsOverflowing] = useState(false) // Added state for overflow
-  const navbarRef = useRef(null) // Added ref for navbar
+  const [visible, setVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [menuPopoverVisible, setMenuPopoverVisible] = useState(false);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+  const navbarRef = useRef(null);
 
   // Refs for scrolling to sections
-  const introRef = useRef(null)
-  const caroRef = useRef(null)
-  const herosRef = useRef(null)
-  const statsRef = useRef(null)
-  const testimonialRef = useRef(null)
-  const contactRef = useRef(null)
-  const servicesRef = useRef(null)
+  const introRef = useRef(null);
+  const caroRef = useRef(null);
+  const herosRef = useRef(null);
+  const statsRef = useRef(null);
+  const testimonialRef = useRef(null);
+  const contactRef = useRef(null);
+  const servicesRef = useRef(null);
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 992)
-    }
+      setIsMobile(window.innerWidth < 992);
+    };
 
-    checkScreenSize()
-    window.addEventListener("resize", checkScreenSize)
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
 
-    return () => window.removeEventListener("resize", checkScreenSize)
-  }, [])
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
       if (navbarRef.current) {
-        setIsOverflowing(navbarRef.current.scrollWidth > navbarRef.current.offsetWidth)
+        setIsOverflowing(navbarRef.current.scrollWidth > navbarRef.current.offsetWidth);
       }
-    }
+    };
 
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [isMobile])
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isMobile]);
 
   const showDrawer = () => {
-    setVisible(true)
-  }
+    setVisible(true);
+  };
 
   const onClose = () => {
-    setVisible(false)
-  }
+    setVisible(false);
+  };
 
   const scrollToSection = (ref) => {
     if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth", block: "start" })
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-    setMenuPopoverVisible(false)
-    onClose()
-  }
+    setMenuPopoverVisible(false);
+    onClose();
+  };
 
   const mainMenuItems = [
     { key: "intro", label: "Home", ref: introRef },
@@ -85,7 +85,7 @@ export default function PortfolioNavbar() {
     { key: "stats", label: "Stats", ref: statsRef },
     { key: "testimonial", label: "Testimonials", ref: testimonialRef },
     { key: "contact", label: "My Contact", ref: contactRef },
-  ]
+  ];
 
   const socialMenuItems = [
     {
@@ -128,7 +128,7 @@ export default function PortfolioNavbar() {
       link: "https://x.com/erick_olando",
     },
     {
-      key: "Medium",
+      key: "medium",
       icon: (
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Medium_logo_Monogram.svg"
@@ -141,7 +141,7 @@ export default function PortfolioNavbar() {
       link: "https://medium.com/@olandoerick98",
     },
     {
-      key: "Instagram",
+      key: "instagram",
       icon: (
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
@@ -154,7 +154,7 @@ export default function PortfolioNavbar() {
       link: "https://www.instagram.com/ericky54/",
     },
     {
-      key: "Youtube",
+      key: "youtube",
       icon: (
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
@@ -163,21 +163,25 @@ export default function PortfolioNavbar() {
           height="24"
         />
       ),
-      label: "Youtube",
+      label: "YouTube",
       link: "https://www.youtube.com/@erickolando153",
     },
-  ]
+  ];
 
   const mobileMenuItems = [
     ...mainMenuItems.map((item) => ({
       key: item.key,
-      icon: item.icon,
       label: item.label,
       onClick: () => scrollToSection(item.ref),
     })),
     { type: "divider" },
-    ...socialMenuItems,
-  ]
+    ...socialMenuItems.map((item) => ({
+      key: item.key,
+      label: item.label,
+      icon: item.icon,
+      onClick: () => window.open(item.link, "_blank"),
+    })),
+  ];
 
   const headerStyle = {
     background: "#ffffff",
@@ -191,14 +195,14 @@ export default function PortfolioNavbar() {
     right: 0,
     zIndex: 1000,
     transition: "all 0.3s",
-  }
+  };
 
   const containerStyle = {
     maxWidth: "1200px",
     margin: "0 auto",
     padding: "0 15px",
     width: "100%",
-  }
+  };
 
   const navStyle = {
     display: "flex",
@@ -209,7 +213,7 @@ export default function PortfolioNavbar() {
     margin: "0 auto",
     flexWrap: "nowrap",
     gap: "20px",
-  }
+  };
 
   const logoStyle = {
     fontSize: "24px",
@@ -217,14 +221,14 @@ export default function PortfolioNavbar() {
     color: "#1890ff",
     transition: "color 0.3s",
     textDecoration: "none",
-  }
+  };
 
   const menuStyle = {
     border: "none",
     background: "none",
     display: "flex",
     justifyContent: "center",
-  }
+  };
 
   const menuItemStyle = {
     color: "rgba(0, 0, 0, 0.85)",
@@ -233,7 +237,7 @@ export default function PortfolioNavbar() {
     "&:hover": {
       color: "#1890ff",
     },
-  }
+  };
 
   const iconButtonStyle = {
     border: "none",
@@ -243,7 +247,7 @@ export default function PortfolioNavbar() {
     "&:hover": {
       transform: "scale(1.1)",
     },
-  }
+  };
 
   const menuPopoverContent = (
     <Menu mode="vertical" style={{ border: "none" }}>
@@ -263,7 +267,7 @@ export default function PortfolioNavbar() {
         Testimonials
       </Menu.Item>
     </Menu>
-  )
+  );
 
   return (
     <ConfigProvider
@@ -301,19 +305,7 @@ export default function PortfolioNavbar() {
                 >
                   {mainMenuItems.map((item) => (
                     <Menu.Item key={item.key} onClick={() => scrollToSection(item.ref)} style={menuItemStyle}>
-                      {item.label === "Menu" ? (
-                        <Popover
-                          content={menuPopoverContent}
-                          trigger="hover"
-                          visible={menuPopoverVisible}
-                          onVisibleChange={(visible) => setMenuPopoverVisible(visible)}
-                          placement="bottom"
-                        >
-                          <span>{item.label}</span>
-                        </Popover>
-                      ) : (
-                        item.label
-                      )}
+                      {item.label}
                     </Menu.Item>
                   ))}
                 </Menu>
@@ -337,13 +329,6 @@ export default function PortfolioNavbar() {
           <Menu
             mode="vertical"
             items={mobileMenuItems}
-            onClick={(item) => {
-              if (item.key.startsWith("http")) {
-                window.open(item.key, "_blank")
-              } else {
-                scrollToSection(mainMenuItems.find((menuItem) => menuItem.key === item.key).ref)
-              }
-            }}
             style={{ border: "none" }}
           />
         </Drawer>
@@ -373,6 +358,5 @@ export default function PortfolioNavbar() {
         <Myfooter />
       </main>
     </ConfigProvider>
-  )
+  );
 }
-

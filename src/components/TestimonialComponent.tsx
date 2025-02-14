@@ -23,10 +23,10 @@ const testimonials: Testimonial[] = [
     avatar: "https://github.com/eritech98/Images_private/raw/main/WhatsApp%20Image%202025-02-13%20at%2013.24.23_9b050a27.jpg"
   },
   {
-    name: "Emma Williams",
-    position: "Founder, StartUp Success",
-    content: "The results exceeded our expectations in every way.",
-    avatar: "https://images.unsplash.com/photo-1531123414780-f74242c2b052?w=500&auto=format&fit=crop&q=60"
+    name: "Safae Zghari",
+    position: "Software Engineer, Morocco",
+    content: "Erick is a notable colleague who constantly goes above and beyond to ensure projects are completed and to the greatest standard, demonstrating a remarkable ability to adapt to changing conditions. Erick is also a dedicated friend who never leaves you behind.",
+    avatar: "https://github.com/eritech98/Images_private/raw/main/SAF.jpg"
   },
   {
     name: "David Lee",

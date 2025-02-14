@@ -69,7 +69,7 @@ const TestimonialComponent: React.FC = () => {
 
   return (
     <section className="testimonial-section" onMouseEnter={stopAutoSlide} onMouseLeave={startAutoSlide} onKeyDown={handleKeyDown} tabIndex={0}>
-      <h2 className="section-title">Client Testimonials</h2>
+      <h2 className="section-title">Testimonials</h2>
       <div className="testimonial-container">
         {testimonials.map((testimonial, index) => (
           <div

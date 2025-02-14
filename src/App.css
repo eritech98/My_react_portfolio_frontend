@@ -3,3 +3,11 @@
   overflow-x: hidden; /* Prevents horizontal scrolling */
     touch-action: manipulation;
 }
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+

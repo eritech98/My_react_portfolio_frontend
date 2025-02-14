@@ -129,6 +129,19 @@ export default function PortfolioNavbar() {
       link: "https://medium.com/@olandoerick98",
     },
     {
+      key: "Instagram",
+      icon: (
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+          alt="Instagram Logo"
+          width="18"
+          height="18"
+        />
+      ),
+      label: "Instagram",
+      link: "https://www.instagram.com/ericky54/",
+    },
+    {
       key: "Youtube",
       icon: (
         <img

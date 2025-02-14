@@ -505,7 +505,7 @@ const Intro = forwardRef((props, ref) => {
             /*text-align: center;*/
           }
           .intro-content h1 {
-            font-size: 5.5rem !important;
+            font-size: 32.5rem !important;
             font-weight: 800 !important;
             letter-spacing: -0.5px;
             line-height: 1.2;

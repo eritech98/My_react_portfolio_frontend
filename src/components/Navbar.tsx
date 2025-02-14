@@ -305,7 +305,19 @@ export default function PortfolioNavbar() {
                 >
                   {mainMenuItems.map((item) => (
                     <Menu.Item key={item.key} onClick={() => scrollToSection(item.ref)} style={menuItemStyle}>
-                      {item.label}
+                      {item.label === "Menu" ? (
+                        <Popover
+                          content={menuPopoverContent}
+                          trigger="hover"
+                          visible={menuPopoverVisible}
+                          onVisibleChange={(visible) => setMenuPopoverVisible(visible)}
+                          placement="bottom"
+                        >
+                          <span>{item.label}</span>
+                        </Popover>
+                      ) : (
+                        item.label
+                      )}
                     </Menu.Item>
                   ))}
                 </Menu>
@@ -329,6 +341,13 @@ export default function PortfolioNavbar() {
           <Menu
             mode="vertical"
             items={mobileMenuItems}
+            onClick={(item) => {
+              if (item.key.startsWith("http")) {
+                window.open(item.key, "_blank");
+              } else {
+                scrollToSection(mainMenuItems.find((menuItem) => menuItem.key === item.key).ref);
+              }
+            }}
             style={{ border: "none" }}
           />
         </Drawer>

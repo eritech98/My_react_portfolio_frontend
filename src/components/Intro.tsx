@@ -55,6 +55,7 @@ const whiteText = { color: "white" }
 const Intro = forwardRef((props, ref) => {
   const [activeTab, setActiveTab] = useState("1")
   const [experienceSuffix, setExperienceSuffix] = useState("years")
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -65,6 +66,10 @@ const Intro = forwardRef((props, ref) => {
     window.addEventListener("resize", handleResize)
 
     return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
+  useEffect(() => {
+    setIsVisible(true)
   }, [])
 
   const workflowSteps = [
@@ -115,7 +120,15 @@ const Intro = forwardRef((props, ref) => {
               <Row gutter={[48, 48]} align="middle">
                 <Col xs={24} md={12}>
                   <Badge.Ribbon text="Available for hire" color="green">
-                    <Card style={cardStyle}>
+                    <Card
+                      style={{
+                        ...cardStyle,
+                        transition: "all 0.3s ease",
+                        transform: isVisible ? "translateY(0)" : "translateY(20px)",
+                        opacity: isVisible ? 1 : 0,
+                      }}
+                      className="hover-scale"
+                    >
                       <Space direction="vertical" size="large" style={{ width: "100%" }}>
                         <div style={{ textAlign: "center" }}>
                           <Avatar
@@ -128,7 +141,7 @@ const Intro = forwardRef((props, ref) => {
                           </Title>
                           <Text style={{ ...whiteText, opacity: 0.8 }}>Full Stack Developer | Meteorologist</Text>
                         </div>
-                        <Row gutter={16}>
+                        <Row gutter={16} className="card-stats">
                           <Col span={8}>
                             <Statistic
                               title={<span style={{ ...whiteText, opacity: 0.8 }}>Projects</span>}
@@ -160,7 +173,12 @@ const Intro = forwardRef((props, ref) => {
                   </Badge.Ribbon>
                 </Col>
                 <Col xs={24} md={12} className="intro-content">
-                  <Space direction="vertical" size="large" style={{ width: "100%" }}>
+                  <Space
+                    direction="vertical"
+                    size="large"
+                    style={{ width: "100%" }}
+                    className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+                  >
                     <Title level={1} style={{ ...whiteText, margin: 0 }}>
                       Crafting Digital Excellence
                     </Title>
@@ -185,11 +203,13 @@ const Intro = forwardRef((props, ref) => {
                             borderRadius: "4px",
                             boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
                             transition: "all 0.3s ease",
+                            transform: "translateY(0)",
                             "&:hover": {
                               backgroundColor: "#e6e9eb",
                               color: "#000",
                               borderColor: "#adb5bd",
-                              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)",
+                              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+                              transform: "translateY(-2px)",
                             },
                           }}
                         >
@@ -206,6 +226,13 @@ const Intro = forwardRef((props, ref) => {
                             borderRadius: "4px",
                             boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
                             transition: "all 0.3s ease",
+                            transform: "translateY(0)",
+                            "&:hover": {
+                              borderColor: "white",
+                              color: "white",
+                              boxShadow: "0 4px 12px rgba(255, 255, 255, 0.2)",
+                              transform: "translateY(-2px)",
+                            },
                           }}
                           icon={<HeartOutlined />}
                         >
@@ -462,11 +489,70 @@ const Intro = forwardRef((props, ref) => {
             text-align: center;
           }
           .intro-content h1 {
-            font-size: 2.3rem !important;
+            font-size: 2.5rem !important;
+            font-weight: 800 !important;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+            letter-spacing: -0.5px;
+            animation: slideInUp 0.8s ease-out forwards, glowText 2s ease-in-out infinite alternate;
           }
           .intro-content .ant-typography {
             font-size: 15px !important;
           }
+          .intro-content .ant-space {
+            animation: fadeIn 0.8s ease-out forwards;
+          }
+          .card-stats {
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+          }
+          .card-stats:hover {
+            transform: translateY(-5px);
+          }
+        }
+
+        @keyframes slideInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes glowText {
+          from {
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+          }
+          to {
+            text-shadow: 0 2px 20px rgba(255, 255, 255, 0.4);
+          }
+        }
+
+        .fade-in-section {
+          opacity: 0;
+          transform: translateY(20px);
+          visibility: hidden;
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+          will-change: opacity, visibility;
+        }
+
+        .fade-in-section.is-visible {
+          opacity: 1;
+          transform: none;
+          visibility: visible;
+        }
+
+        .hover-scale {
+          transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+          transform: scale(1.02);
         }
       `}</style>
     </ConfigProvider>

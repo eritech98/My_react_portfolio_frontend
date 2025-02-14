@@ -505,9 +505,10 @@ const Intro = forwardRef((props, ref) => {
             /*text-align: center;*/
           }
           .intro-content h1 {
-            font-size: 3rem !important;
+            font-size: 3.5rem !important;
             font-weight: 800 !important;
             letter-spacing: -0.5px;
+            line-height: 1.2;
           }
           .intro-content .ant-typography {
             font-size: 15px !important;
@@ -521,6 +522,11 @@ const Intro = forwardRef((props, ref) => {
           }
           .card-stats:hover {
             transform: translateY(-5px);
+          }
+        }
+        @media (min-width: 480px) and (max-width: 768px) {
+          .intro-content h1 {
+            font-size: 4rem !important;
           }
         }
 

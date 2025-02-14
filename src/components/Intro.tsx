@@ -185,7 +185,7 @@ const Intro = forwardRef((props, ref) => {
                     style={{ width: "100%" }}
                     className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
                   >
-                    <Title level={1} style={{ ...whiteText, margin: 0 }}>
+                    <Title className="Erick" level={1} style={{ ...whiteText, margin: 0 }}>
                       Crafting Digital Excellence
                     </Title>
                     <Paragraph style={{ ...whiteText, opacity: 0.8, fontSize: "17px" }}>
@@ -505,7 +505,7 @@ const Intro = forwardRef((props, ref) => {
             /*text-align: center;*/
           }
           .intro-content h1 {
-            font-size: 3.5rem !important;
+            font-size: 5.5rem !important;
             font-weight: 800 !important;
             letter-spacing: -0.5px;
             line-height: 1.2;

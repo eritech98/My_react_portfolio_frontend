@@ -13,7 +13,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Gorata Malose",
     position: "Fellow, Princeton Africa",
-    content: "Erick Olando is an incredibly dedicated and talented individual. His passion for innovation, problem-solving, and excellence is truly inspiring. Beyond his skills, he is a reliable and supportive friend. Anyone who works with him will quickly see his exceptional work ethic and creativity.",
+    content: "Erick is an incredibly dedicated and talented individual. His passion for innovation, problem-solving, and excellence is truly inspiring. Beyond his skills, he is a reliable and supportive friend. Anyone who works with him will quickly see his exceptional work ethic and creativity.",
     avatar: "https://github.com/eritech98/Images_private/raw/main/OIP.jpeg"
   },
   {

@@ -166,6 +166,7 @@ const Intro = forwardRef((props, ref) => {
                         href="https://drive.google.com/file/d/1SGvrFJyi5GpU2iV599zBsgCXpYBQ8Cyb/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
+                        style={{ textDecoration: "none" }}
                       >
                         <Button
                           type="default"
@@ -189,7 +190,7 @@ const Intro = forwardRef((props, ref) => {
                           Download CV
                         </Button>
                       </a>
-                      <a href="#section1">
+                      <a href="#section1" style={{ textDecoration: "none" }}>
                         <Button
                           size="large"
                           ghost

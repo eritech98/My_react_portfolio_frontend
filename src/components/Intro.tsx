@@ -462,7 +462,7 @@ const Intro = forwardRef((props, ref) => {
             text-align: center;
           }
           .intro-content h1 {
-            font-size: 2rem !important;
+            font-size: 2.3rem !important;
           }
           .intro-content .ant-typography {
             font-size: 15px !important;

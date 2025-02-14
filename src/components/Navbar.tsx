@@ -1,4 +1,3 @@
-[V0_FILE]typescriptreact:file="portfolio-navbar.tsx" isEdit="true" isQuickEdit="true"
 "use client"
 
 import { useState, useEffect, useRef } from "react"
@@ -24,12 +23,9 @@ import Myfooter from "./Myfooter"
 const { Header } = Layout
 
 export default function PortfolioNavbar() {
-  const [deviceType, setDeviceType] = useState("desktop")
-  //const [visible, setVisible] = useState(false)
-  //const [isTablet, setIsTablet] = useState(false) // Added isTablet state
-  //const [isMobile, setIsMobile] = useState(false)
-  const [menuPopoverVisible, setMenuPopoverVisible] = useState(false)
   const [visible, setVisible] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const [menuPopoverVisible, setMenuPopoverVisible] = useState(false)
 
   // Refs for scrolling to sections
   const introRef = useRef(null)
@@ -42,15 +38,7 @@ export default function PortfolioNavbar() {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      if (window.innerWidth < 768) {
-        setDeviceType("mobile")
-      } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
-        setDeviceType("tablet")
-      } else if (window.innerWidth >= 1024 && window.innerWidth < 1200) {
-        setDeviceType("hybrid")
-      } else {
-        setDeviceType("desktop")
-      }
+      setIsMobile(window.innerWidth < 992)
     }
 
     checkScreenSize()
@@ -242,6 +230,9 @@ export default function PortfolioNavbar() {
       transform: "scale(1.1)",
     },
   }
+  
+
+
 
   const menuPopoverContent = (
     <Menu mode="vertical" style={{ border: "none" }}>
@@ -288,7 +279,7 @@ export default function PortfolioNavbar() {
                 Erick.O
               </a>
             </div>
-            {deviceType === "desktop" && (
+            {!isMobile && (
               <>
                 <Menu
                   mode="horizontal"
@@ -326,31 +317,7 @@ export default function PortfolioNavbar() {
                 </div>
               </>
             )}
-            {deviceType === "hybrid" && (
-              <>
-                <Menu
-                  mode="horizontal"
-                  style={{ ...menuStyle, flex: 1, justifyContent: "center" }}
-                  selectable={false}
-                  overflowedIndicator={<MenuOutlined />}
-                >
-                  {mainMenuItems.slice(0, 4).map((item) => (
-                    <Menu.Item key={item.key} onClick={() => scrollToSection(item.ref)} style={menuItemStyle}>
-                      {item.label}
-                    </Menu.Item>
-                  ))}
-                  <Menu.SubMenu key="more" title="More" style={menuItemStyle}>
-                    {mainMenuItems.slice(4).map((item) => (
-                      <Menu.Item key={item.key} onClick={() => scrollToSection(item.ref)}>
-                        {item.label}
-                      </Menu.Item>
-                    ))}
-                  </Menu.SubMenu>
-                </Menu>
-                <Button type="text" icon={<MenuOutlined />} onClick={showDrawer} style={{ color: "inherit" }} />
-              </>
-            )}
-            {(deviceType === "mobile" || deviceType === "tablet") && (
+            {isMobile && (
               <Button type="text" icon={<MenuOutlined />} onClick={showDrawer} style={{ color: "inherit" }} />
             )}
           </nav>
@@ -368,22 +335,6 @@ export default function PortfolioNavbar() {
             }}
             style={{ border: "none" }}
           />
-          {deviceType === "hybrid" && (
-            <div style={{ display: "flex", justifyContent: "center", padding: "16px" }}>
-              {socialMenuItems.map((item) => (
-                <Tooltip key={item.key} title={item.label}>
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ ...iconButtonStyle, margin: "0 8px" }}
-                  >
-                    <Button icon={item.icon} type="text" />
-                  </a>
-                </Tooltip>
-              ))}
-            </div>
-          )}
         </Drawer>
       </Header>
       <div style={{ height: "64px" }} />
@@ -413,3 +364,4 @@ export default function PortfolioNavbar() {
     </ConfigProvider>
   )
 }
+

@@ -129,7 +129,12 @@ const Intro = forwardRef((props, ref) => {
                             <Statistic
                               title={<span style={{ ...whiteText, opacity: 0.8 }}>Experience</span>}
                               value={2}
-                              suffix={<span className="experience-suffix">years</span>}
+                              suffix={
+                                <span className="experience-suffix">
+                                  <span className="years">years</span>
+                                  <span className="yrs">yrs</span>
+                                </span>
+                              }
                               prefix={<ClockCircleOutlined />}
                               valueStyle={whiteText}
                             />
@@ -435,6 +440,9 @@ const Intro = forwardRef((props, ref) => {
 
       {/* CSS for Animations */}
       <style jsx>{`
+        .experience-suffix .yrs {
+          display: none;
+        }
         @keyframes fadeIn {
           from {
             opacity: 0;
@@ -453,11 +461,11 @@ const Intro = forwardRef((props, ref) => {
           .digital-excellence {
             font-size: 1.8rem !important;
           }
-          .experience-suffix {
+          .experience-suffix .years {
             display: none;
           }
-          .experience-suffix::after {
-            content: 'yrs';
+          .experience-suffix .yrs {
+            display: inline;
           }
         }
       `}</style>

@@ -167,6 +167,27 @@ const Caro: React.FC = () => {
   ]
 }
 ,
+  {
+  "id": 9,
+  "title": "WeatherPro - Advanced Weather Forecasting",
+  "description": "Developed an AI-powered weather forecasting application that provides real-time weather updates, detailed forecasts, and professional insights for pilots, farmers, industries, and event organizers.",
+  "image": "https://github.com/eritech98/Images_private/raw/main/WeatherPro.PNG",
+  
+  "details": "WeatherPro delivers accurate weather updates for cities worldwide, including real-time conditions, hourly forecasts, and specialized weather insights for various industries. The application utilizes AI-driven analysis to assess weather impact on aviation, farming, military operations, and more. Users can access a 24-hour forecast, precipitation probabilities, and energy potential calculations for solar and wind power.",
+  "projectLink": "https://erickweather.up.railway.app/",
+  "features": [
+    "Real-time weather updates",
+    "24-hour and multi-day forecasts",
+    "AI-powered weather impact analysis",
+    "Aviation weather insights for pilots",
+    "Farming and industrial condition analysis",
+    "Energy potential assessments (wind & solar)",
+    "Health impact reports (air quality, pollen levels)",
+    "Sports and event planning weather conditions",
+    "User-friendly interface with interactive features"
+  ]
+}
+,  
   ];
 
   const allProjects = [...meteorologyProjects, ...vaProjects, ...softwareProjects];

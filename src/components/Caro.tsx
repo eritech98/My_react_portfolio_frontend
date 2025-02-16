@@ -21,7 +21,7 @@ const Caro: React.FC = () => {
       description: "A real-time chat and voice communication platform with session recording and music playback.",
       image: "https://github.com/eritech98/Images_private/raw/main/Chico.PNG", // Thumbnail image
       
-      details: "Chico is a dynamic real-time chat application that enables users to engage in text and voice conversations. Features include session recording, music integration, and secure authentication for private chats. Built using Node.js, EJS, WebSockets, and Express, it delivers a seamless and interactive communication experience.",
+      details: "Chico is a dynamic real-time chat application that enables users to engage in text and voice conversations. Features include session recording, music integration, and secure authentication for private chats. Built using Node.js, EJS, WebSockets, and Express, it delivers a seamless and interactive communication experience.(Hosted on a free render server)",
       projectLink: "https://chico-audio.onrender.com/", // Link to the project
       features: [
         "Real-time text and voice communication",
@@ -37,7 +37,7 @@ const Caro: React.FC = () => {
       image: 'https://github.com/eritech98/Images_private/raw/main/ProEase.PNG',
      
       details: 'ProEase simplifies property management with automated rent collection, maintenance tracking, and financial reporting. Designed for efficiency and transparency, it empowers landlords with full control over their properties. The app is still in development.',
-      projectLink: 'https://example.com/proease',
+      projectLink: '(Running locally not deployed)',
       features: [
         "Automated rent collection",
         "Maintenance request tracking",
@@ -83,7 +83,7 @@ const Caro: React.FC = () => {
   "description": "A web platform designed to help students with coaching, mentorship, and studying abroad opportunities.",
   "image": "https://github.com/eritech98/Images_private/raw/main/client.PNG",
   "details": "This platform was developed for a client to assist students in academic coaching, career mentorship, and securing opportunities to study abroad. It provides personalized coaching sessions, study materials, and step-by-step guidance for international education applications. The platform simplifies the process of finding scholarships, visa applications, and admissions into top universities worldwide.(still in development)",
-  "projectLink": "https://example.com/student-coaching",
+  "projectLink": "(Running locally not deployed)",
   "features": [
     "Personalized coaching for students",
     "Guidance for studying abroad and scholarships",
@@ -100,7 +100,7 @@ const Caro: React.FC = () => {
   "description": "A weather application with a live radar map, GPS search, and a beautiful UI for real-time weather updates.",
   "image": "https://github.com/eritech98/Images_private/raw/main/weather.PNG",
   "details": "This weather app provides real-time weather updates with a live radar map powered by MapTiler. Users can search for any location worldwide using a GPS-based search or a manual search bar within the radar map. The application features a sleek, modern frontend with a sliding modal that displays the current and tomorrow’s forecast in an interactive and user-friendly way.(still in development)",
-  "projectLink": "",
+  "projectLink": "(Running locally not deployed)",
   "features": [
     "Live radar map with real-time weather data",
     "GPS search for automatic location detection",

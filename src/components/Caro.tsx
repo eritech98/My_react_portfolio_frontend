@@ -82,7 +82,7 @@ const Caro: React.FC = () => {
   "title": "Student Coaching & Study Abroad Platform",
   "description": "A web platform designed to help students with coaching, mentorship, and studying abroad opportunities.",
   "image": "https://github.com/eritech98/Images_private/raw/main/client.PNG",
-  "details": "This platform was developed for a client to assist students in academic coaching, career mentorship, and securing opportunities to study abroad. It provides personalized coaching sessions, study materials, and step-by-step guidance for international education applications. The platform simplifies the process of finding scholarships, visa applications, and admissions into top universities worldwide.",
+  "details": "This platform was developed for a client to assist students in academic coaching, career mentorship, and securing opportunities to study abroad. It provides personalized coaching sessions, study materials, and step-by-step guidance for international education applications. The platform simplifies the process of finding scholarships, visa applications, and admissions into top universities worldwide.(still in development)",
   "projectLink": "https://example.com/student-coaching",
   "features": [
     "Personalized coaching for students",
@@ -99,8 +99,8 @@ const Caro: React.FC = () => {
   "title": "Live Weather Radar & Forecast App",
   "description": "A weather application with a live radar map, GPS search, and a beautiful UI for real-time weather updates.",
   "image": "https://github.com/eritech98/Images_private/raw/main/weather.PNG",
-  "details": "This weather app provides real-time weather updates with a live radar map powered by MapTiler. Users can search for any location worldwide using a GPS-based search or a manual search bar within the radar map. The application features a sleek, modern frontend with a sliding modal that displays the current and tomorrow’s forecast in an interactive and user-friendly way.",
-  "projectLink": "https://example.com/weather-app",
+  "details": "This weather app provides real-time weather updates with a live radar map powered by MapTiler. Users can search for any location worldwide using a GPS-based search or a manual search bar within the radar map. The application features a sleek, modern frontend with a sliding modal that displays the current and tomorrow’s forecast in an interactive and user-friendly way.(still in development)",
+  "projectLink": "",
   "features": [
     "Live radar map with real-time weather data",
     "GPS search for automatic location detection",

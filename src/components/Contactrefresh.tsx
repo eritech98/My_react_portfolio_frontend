@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Contact from './Contact';
 
-const Contactrefresh = () => {
+const Contactrefresh: React.FC = () => {
   return (
     <Router>
       <Routes>
@@ -13,4 +12,4 @@ const Contactrefresh = () => {
   );
 };
 
-export default Contactrefresh ;
+export default Contactrefresh;

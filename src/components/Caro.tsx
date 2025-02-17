@@ -287,6 +287,7 @@ const Caro: React.FC = () => {
                   rel="noopener noreferrer"
                   className="text-blue-500 hover:text-blue-700 transition-colors duration-200"
                 >
+                  <a href="#">Contact me</a>
                   {selectedProject?.projectLink}
                 </p>
               </div>

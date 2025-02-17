@@ -37,7 +37,7 @@ const Caro: React.FC = () => {
       image: 'https://github.com/eritech98/Images_private/raw/main/ProEase.PNG',
      
       details: 'ProEase simplifies property management with automated rent collection, maintenance tracking, and financial reporting. Designed for efficiency and transparency, it empowers landlords with full control over their properties. The app is still in development.',
-      projectLink: '(Running locally not deployed)',
+      projectLink: "Please reach out if you'd like to see a live demo",
       features: [
         "Automated rent collection",
         "Maintenance request tracking",

@@ -5,7 +5,6 @@ import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css";
 import "../../node_modules/bootstrap/dist/js/bootstrap.min.js"
 import '../../node_modules/antd/dist/reset.css';
-import { Link } from 'react-router-dom';
 
 const { Content } = Layout;
 const { TabPane } = Tabs;
@@ -23,7 +22,7 @@ const Caro: React.FC = () => {
       image: "https://github.com/eritech98/Images_private/raw/main/Chico.PNG", // Thumbnail image
       
       details: "Chico is a dynamic real-time chat application that enables users to engage in text and voice conversations. Features include session recording, music integration, and secure authentication for private chats. Built using Node.js, EJS, WebSockets, and Express, it delivers a seamless and interactive communication experience.(Hosted on a free render server)",
-      projectLink: "Please reach out if you'd like to see a live demo", // Link to the project
+      projectLink: "https://chico-audio.onrender.com/", // Link to the project
       features: [
         "Real-time text and voice communication",
         "Session recording for playback",
@@ -38,7 +37,7 @@ const Caro: React.FC = () => {
       image: 'https://github.com/eritech98/Images_private/raw/main/ProEase.PNG',
      
       details: 'ProEase simplifies property management with automated rent collection, maintenance tracking, and financial reporting. Designed for efficiency and transparency, it empowers landlords with full control over their properties. The app is still in development.',
-      projectLink: "Please reach out if you'd like to see a live demo",
+      projectLink: '(Running locally not deployed)',
       features: [
         "Automated rent collection",
         "Maintenance request tracking",
@@ -51,7 +50,7 @@ const Caro: React.FC = () => {
       image: 'https://github.com/eritech98/Images_private/raw/main/SkyHire.PNG', 
     
       details: 'SkyHire connects users with aircraft rental services, offering real-time availability, pricing, and booking options. Designed for efficiency and convenience, it simplifies the aircraft hiring process.', 
-      projectLink: "Please reach out if you'd like to see a live demo",
+      projectLink: 'https://eritech98.github.io/test4/',
       features: [
         "Real-time aircraft availability",
         "Transparent pricing and booking",
@@ -84,7 +83,7 @@ const Caro: React.FC = () => {
   "description": "A web platform designed to help students with coaching, mentorship, and studying abroad opportunities.",
   "image": "https://github.com/eritech98/Images_private/raw/main/client.PNG",
   "details": "This platform was developed for a client to assist students in academic coaching, career mentorship, and securing opportunities to study abroad. It provides personalized coaching sessions, study materials, and step-by-step guidance for international education applications. The platform simplifies the process of finding scholarships, visa applications, and admissions into top universities worldwide.(still in development)",
-  "projectLink": "Please reach out if you'd like to see a live demo",
+  "projectLink": "(Running locally not yet deployed)",
   "features": [
     "Personalized coaching for students",
     "Guidance for studying abroad and scholarships",
@@ -101,7 +100,7 @@ const Caro: React.FC = () => {
   "description": "A weather application with a live radar map, GPS search, and a beautiful UI for real-time weather updates.",
   "image": "https://github.com/eritech98/Images_private/raw/main/weather.PNG",
   "details": "This weather app provides real-time weather updates with a live radar map powered by MapTiler. Users can search for any location worldwide using a GPS-based search or a manual search bar within the radar map. The application features a sleek, modern frontend with a sliding modal that displays the current and tomorrow’s forecast in an interactive and user-friendly way.(complete)",
-  "projectLink": "Please reach out if you'd like to see a live demo",
+  "projectLink": "(Running locally not yet deployed)",
   "features": [
     "Live radar map with real-time weather data",
     "GPS search for automatic location detection",
@@ -122,7 +121,7 @@ const Caro: React.FC = () => {
       image: 'https://github.com/eritech98/Images_private/raw/main/cosmo.PNG', 
        
       details: 'Cosmo delivers breathtaking daily images from NASAs Astronomy Picture of the Day (APOD) with insightful explanations. It features a responsive design, an interactive starry background and embedded SpaceX videos to enhance the user experience.', 
-      projectLink: "Please reach out if you'd like to see a live demo",
+      projectLink: 'https://erickolando.up.railway.app/',
       features: [
         "Daily updated astronomy picture with detailed explanation",
         "Responsive design for optimal viewing on all devices",
@@ -155,7 +154,7 @@ const Caro: React.FC = () => {
   "image": "https://github.com/eritech98/Images_private/raw/main/Chatai2.PNG",
   
   "details": "Erick AI is a conversational AI bot capable of engaging users in meaningful discussions, answering questions, and providing insights across various topics. Built with advanced NLP capabilities, it ensures smooth and context-aware interactions.Limited to 10 requests per IP after which a user waits for 3 days",
-  "projectLink": "Please reach out if you'd like to see a live demo",
+  "projectLink": "(Running locally not yet deployed)",
   "features": [
     "Natural language conversation",
     "Context-aware responses",
@@ -175,7 +174,7 @@ const Caro: React.FC = () => {
   "image": "https://github.com/eritech98/Images_private/raw/main/Updated.PNG",
   
   "details": "WeatherPro delivers accurate weather updates for cities worldwide, including real-time conditions, hourly forecasts, and specialized weather insights for various industries. The application utilizes AI-driven analysis to assess weather impact on aviation, farming, military operations, and more. Users can access a 24-hour forecast, precipitation probabilities, and energy potential calculations for solar and wind power.",
-  "projectLink": "Please reach out if you'd like to see a live demo",
+  "projectLink": "https://erickweather.up.railway.app/",
   "features": [
     "Real-time weather updates",
     "24-hour and multi-day forecasts",
@@ -282,17 +281,16 @@ const Caro: React.FC = () => {
                 </ul>
                 <Divider />
                 <h5 className="text-lg font-semibold mb-2">Project Link:</h5>
-                <p
+                <a
                   href={selectedProject?.projectLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 hover:text-blue-700 transition-colors duration-200"
                 >
-                  
                   {selectedProject?.projectLink}
-                </p>
-                
-                <a href="#section1">Contact me</a>
+                  
+            
+                </a>
               </div>
             </div>
           </>

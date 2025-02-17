@@ -5,6 +5,7 @@ import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css";
 import "../../node_modules/bootstrap/dist/js/bootstrap.min.js"
 import '../../node_modules/antd/dist/reset.css';
+import { Link } from 'react-router-dom';
 
 const { Content } = Layout;
 const { TabPane } = Tabs;
@@ -291,7 +292,13 @@ const Caro: React.FC = () => {
                   {selectedProject?.projectLink}
                 </p>
                 
-                <a href="#section1">Contact me</a>
+                <Link
+        to="/contact"
+        reloadDocument
+        className="text-blue-500 hover:text-blue-700 transition-colors duration-200"
+      >
+        Contact me
+      </Link>
               </div>
             </div>
           </>

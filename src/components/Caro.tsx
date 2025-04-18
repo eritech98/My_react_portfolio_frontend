@@ -187,7 +187,27 @@ const Caro: React.FC = () => {
     "User-friendly interface with interactive features"
   ]
 }
-,  
+, {
+  "id": 11,
+  "title": "IPCC AI - Climate Intelligence Chatbot",
+  "description": "Created a generative AI chatbot that answers any IPCC or climate-related question using LLMs and simplified summaries of global climate reports for public and research use.",
+  "image": "https://github.com/eritech98/Images_private/raw/main/IPCC_AI_Preview.PNG",
+
+  "details": "IPCC AI uses powerful LLMs to answer questions on climate change, summarizing IPCC and related reports in clear, conversational language. It offers insights into climate science, risks, adaptation, and mitigation—making climate data accessible to all, from students to policymakers.",
+  "projectLink": "Running locally,not yet deployed",
+  "features": [
+    "LLM-powered climate Q&A chatbot",
+    "Summarizes IPCC and climate reports",
+    "Real-time climate intelligence",
+    "Answers any climate-related question",
+    "Simplifies complex climate science",
+    "Supports education and decision-making",
+    "Interactive, intuitive chat interface",
+    "Adaptation and mitigation insights",
+    "Designed for public and research use"
+  ]
+}
+, 
   ];
 
   const allProjects = [...meteorologyProjects, ...vaProjects, ...softwareProjects];

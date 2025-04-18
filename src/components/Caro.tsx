@@ -191,7 +191,7 @@ const Caro: React.FC = () => {
   "id": 11,
   "title": "IPCC AI - Climate Intelligence Chatbot",
   "description": "Created a generative AI chatbot that answers any IPCC or climate-related question using LLMs and simplified summaries of global climate reports for public and research use.",
-  "image": "https://github.com/eritech98/Images_private/raw/main/IPCC_AI_Preview.PNG",
+  "image": "https://github.com/eritech98/Images_private/raw/main/IPCC_AI_Preview.jpeg",
 
   "details": "IPCC AI uses powerful LLMs to answer questions on climate change, summarizing IPCC and related reports in clear, conversational language. It offers insights into climate science, risks, adaptation, and mitigation—making climate data accessible to all, from students to policymakers.",
   "projectLink": "Running locally,not yet deployed",

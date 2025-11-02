@@ -3,12 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+ "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview --port $PORT",
+  "start": "vite preview --port $PORT"
+},
   "dependencies": {
     "@ant-design/icons": "^5.5.1",
     "@popperjs/core": "^2.11.8",

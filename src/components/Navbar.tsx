@@ -371,11 +371,12 @@ export default function PortfolioNavbar() {
         <div ref={testimonialRef}>
           <Testimonial />
         </div>
-        <div ref={contactRef}>
+        {/* <div ref={contactRef}>
           <Contact />
-        </div>
+        </div> */}
         <Myfooter />
       </main>
     </ConfigProvider>
   );
 }
+
